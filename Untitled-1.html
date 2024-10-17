@@ -1,0 +1,47 @@
+"<script> 
+
+    function pulaLinha() {
+
+        document.write("<br>")
+    }
+
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+    }
+
+
+    function calculaDelta (n1, n2, n3) {
+
+        var delta = (n2 * n2) - (4*n1*n3)
+        return delta
+    }
+
+    function calculaEquaçãoPositiva (n1, n2) {
+
+        var x = ((-n2) + Math.sqrt(delta)) / (2 * n1)
+        return x
+
+    }
+
+    function calculaEquaçãoNegativa (n1, n2) {
+
+        var x = ((-n2) - Math.sqrt(delta)) / (2 * n1)
+
+        return x
+
+    }
+    var a = 1
+    var b = 2    
+    var c = -20
+
+    var delta = calculaDelta (a, b, c);
+    var resultado1 = Math.round(calculaEquaçãoPositiva(a, b));
+    var resultado2 = Math.round(calculaEquaçãoNegativa(a, b));
+
+
+mostra("delta é " + delta);
+mostra("resultado é x¹ = " + resultado1 + " ou x² =  " + resultado2);
+
+</script>
